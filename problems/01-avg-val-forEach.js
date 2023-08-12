@@ -11,10 +11,26 @@ console.log(avgVal([5, 10])); // 7.5
 console.log(avgVal([3, 7, 2, 1, 2])); // 3
 console.log(avgVal([])); // null
 
+//////////////////////////////////////////////////
+
+if the array is empty return null
+get the sum of all the elements in the array using the forEach method
+divide the sum by the length of the array
+return average
+
+////////////////////////////////////////////////
+
 */
 
 let avgVal = function(arr) {
-    // Your code here
+  let sum = 0;
+  let avg = 0;
+  if (arr.length === 0) return null
+  arr.forEach(num => {
+    sum += num
+    avg = sum / arr.length
+  })
+  return avg
 };
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
