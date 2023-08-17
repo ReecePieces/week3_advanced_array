@@ -1,23 +1,25 @@
 /*
-
 Write a function `maxWithReduce(nums)` that takes in an array of numbers.
 The function should return the largest number of the array.
-
 You can assume that the array will not be empty.
-
 Solve this using Array's `reduce()` method.
+*/
 
-Examples:
+let maxWithReduce = nums => {
+  let max = nums.reduce((accum, num) => {
+    if (num > accum) {
+      return num;
+  } else {
+    return accum;
+  }
+}, nums[0])
+  return max
+}
+
+
 
 console.log(maxWithReduce([4, 6, 3, 5, 42, 4])); // 42
 console.log(maxWithReduce([-2, -3, -7, 3])); // 3
-
-*/
-
-let maxWithReduce = function(nums) {
-    // Your code here
-};
-
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
