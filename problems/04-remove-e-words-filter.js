@@ -5,16 +5,17 @@ don't have the letter "e" in them.
 
 Solve this using Array's `filter()` method.
 
-Examples:
+*/
+
+let removeEWords = sentence => {
+  let newArr = sentence.split(' ')
+    let filtered = newArr.filter(word => !word.includes('e'))
+    return filtered.join(' ')
+};
+
 
 console.log(removeEWords('What time is it everyone?')); // 'What is it'
 console.log(removeEWords('Enter the building')); // 'building'
-
-*/
-
-let removeEWords = function(sentence) {
-    // Your code here
-};
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
@@ -22,4 +23,4 @@ try {
   module.exports = removeEWords;
 } catch (e) {
   module.exports = null;
-}
+}
