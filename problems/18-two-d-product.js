@@ -1,13 +1,17 @@
 /*
-
 Write a function `twoDimensionalProduct(array)` that takes in a 2D array of
 numbers as an argument. The function should return the total product of all
 numbers multiplied together.
-
 Solve this using Array's `forEach()`, `map()`, `filter()` **OR** `reduce()`
 methods.
+*/
 
-Examples:
+const twoDimensionalProduct = arr => {
+  return arr.reduce((product, subArr) => {
+      return product * subArr.reduce((subProduct, num) => subProduct * num, 1);
+  }, 1);
+};
+
 
 
 let arr1 = [
@@ -22,12 +26,6 @@ let arr2 = [
   [2]
 ];
 console.log(twoDimensionalProduct(arr2)); // 88
-
-*/
-
-let twoDimensionalProduct = function(arr) {
-    // Your code here
-};
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
